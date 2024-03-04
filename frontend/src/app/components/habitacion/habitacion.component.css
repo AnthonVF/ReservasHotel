@@ -1,0 +1,131 @@
+/*INICIO CONTENIDO*/
+.product-page {
+  padding: 20px;
+}
+
+.product-page h2 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Estilos para la tarjeta de habitaciones */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  overflow: hidden; /* Asegura que todo quede dentro de la tarjeta */
+}
+
+.image-container {
+  position: relative;
+}
+
+.card-img {
+  width: 100%;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.card-img:hover {
+  transform: scale(1.1);
+}
+
+.card-body {
+  padding: 1rem;
+  flex-grow: 1; /* Asegura que el cuerpo de la tarjeta ocupe el espacio restante */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-text ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+
+.card-text ul li:before {
+  content: "•";
+  padding-right: 0.5em;
+  color: #007bff;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.availability-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: white;
+  background-color: #dc3545;
+}
+
+.availability-badge.disponible {
+  background-color: #28a745;
+}
+
+.add-to-cart {
+  padding: 0.5rem 1rem;
+  background-color: #105564;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #688ea1;
+}
+
+/* Asegúrate de que el botón de agregar al carrito se muestre siempre a la derecha */
+.add-to-cart-link {
+  align-self: flex-end;
+}
+
+/* Media queries para ajustar el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-to-cart-link {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .add-to-cart {
+    padding: 0.3rem 0.6rem;
+  }
+}

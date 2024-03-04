@@ -1,0 +1,175 @@
+/*INICIO DE CONTENIDO*/
+/* Estilos para el contenedor del carrito */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Esto ayuda a manejar mejor el ancho y alto de los elementos */
+}
+
+/* Estilos globales para el contenedor */
+.container {
+  max-width: 1200px; /* O el ancho máximo que prefieras */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 0 15px; /* Agrega algo de espacio a los lados */
+}
+
+
+.shopping-cart-container {
+  width: 100%;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+}
+
+.cart-item-info {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item-img {
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  margin-right: 10px;
+}
+
+.cart-item-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px; /* Ajusta el espacio entre el nombre y el precio */
+}
+
+.cart-item-price {
+  font-size: 18px; /* Ajusta el tamaño del texto del precio */
+  font-weight: bold;
+  margin-right: 0px;
+}
+
+/* Estilo por defecto del botón delete */
+.cart-item-delete {
+background-color: #04253e ; /* Color de fondo rojo por defecto */
+color: white; /* Color de texto blanco */
+border: none;
+padding: 5px 10px;
+cursor: pointer;
+transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Estilo del botón delete cuando el cursor pasa por encima */
+.cart-item-delete:hover {
+background-color: #a0c0d0; /* Color de fondo más oscuro cuando el cursor está encima */
+}
+
+/* Estilos para el resumen del carrito */
+.cart-summary {
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* Estilo por defecto del botón de seguir comprando */
+#continue-shopping {
+background-color: #0f4d5a; /* Color de fondo por defecto */
+color: white; /* Color de texto por defecto */
+border: none;
+padding: 10px 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+}
+
+/* Estilo del botón cuando el cursor pasa por encima */
+#continue-shopping:hover {
+background-color: #4494b3; /* Color de fondo cuando el cursor está encima */
+}
+
+/* Estilo por defecto del botón de seguir comprando */
+#complete-purchase {
+background-color: #0f4d5a; /* Color de fondo por defecto */
+color: white; /* Color de texto por defecto */
+border: none;
+padding: 10px 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+}
+
+/* Estilo del botón cuando el cursor pasa por encima */
+#complete-purchase:hover {
+background-color: #4494b3; /* Color de fondo cuando el cursor está encima */
+}
+
+/* Estilo por defecto para los botones del carrito */
+.cart-button {
+  background-color: #0f4d5a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cart-button:hover {
+  background-color: #4494b3;
+}
+
+
+/* Estilos para pantallas de tabletas */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column; /* Cambia la disposición de los elementos a una columna */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+  }
+
+  .cart-item-info {
+    width: 100%; /* Permite que la información del artículo ocupe todo el ancho disponible */
+    justify-content: space-between; /* Distribuye el espacio entre la imagen y el nombre */
+    margin-bottom: 10px; /* Agrega algo de espacio debajo de la información del artículo */
+  }
+
+  .cart-item-delete {
+    padding: 8px 16px; /* Aumenta el área de clic para pantallas táctiles */
+  }
+
+  .cart-summary {
+    text-align: center; /* Centra el texto para dispositivos móviles */
+  }
+}
+
+/* Estilos para pantallas de teléfonos móviles */
+@media (max-width: 576px) {
+  .shopping-cart-container {
+    padding: 10px; /* Reduce el padding para pantallas más pequeñas */
+  }
+
+  .cart-item-name,
+  .cart-item-price {
+    font-size: 16px; /* Reduce la fuente para pantallas más pequeñas */
+  }
+
+  .cart-button {
+    width: 100%; /* Permite que los botones ocupen todo el ancho disponible */
+    margin-bottom: 10px; /* Agrega algo de espacio debajo de cada botón */
+  }
+}
+/*FIN DE CONTENIDO*/

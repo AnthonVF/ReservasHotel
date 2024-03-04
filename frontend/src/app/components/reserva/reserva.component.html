@@ -1,0 +1,21 @@
+<!-- reserva.component.html -->
+<main class="shopping-cart-container">
+    <h1>Carrito</h1>
+    <div id="cart-items">
+      <!-- Itera sobre las habitaciones en el carrito -->
+      <div *ngFor="let habitacion of habitacionesEnCarrito; let i = index" class="cart-item">
+        <div class="cart-item-info">
+          <img *ngIf="habitacion.imagen" [src]="urlBackend + 'uploads/' + habitacion.imagen" class="cart-item-img" [alt]="habitacion.nombre">
+          <span class="cart-item-name">{{ habitacion.nombre }}</span>
+        </div>
+        <span class="cart-item-price">{{ habitacion.precio | currency }}</span>
+        <button (click)="eliminarDelCarrito(habitacion._id)" class="cart-item-delete">X</button>
+      </div>
+    </div>
+    <div class="cart-summary">
+      <p>Número de días de estancia: {{ diasEstadia }}</p>
+      <p>Total: <span id="cart-total">{{ total | currency }}</span></p>
+      <a [routerLink]="['/habitacion']" class="cart-button">Seguir comprando</a>
+      <a [routerLink]="['/sesion']" class="cart-button">Completar compra</a>
+    </div>
+  </main>

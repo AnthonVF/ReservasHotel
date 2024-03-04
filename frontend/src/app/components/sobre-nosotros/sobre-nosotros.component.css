@@ -1,0 +1,27 @@
+/*INICIO DE CONTENIDO*/
+.about-section {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espacio alrededor del texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 40px auto; /* Centrado con un margen superior e inferior */
+    max-width: 800px; /* Máximo ancho del contenido */
+}
+  
+.about-section h2 {
+    text-align: center; /* Título centrado */
+    margin-bottom: 20px; /* Espacio después del título */
+}
+  
+.about-section p {
+    text-align: justify; /* Texto justificado para un mejor flujo */
+    line-height: 1.6; /* Espacio entre líneas para mejor lectura */
+    color: #333; /* Color del texto */
+}
+  
+blockquote {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+}
+/*FIN DE CONTENIDO*/

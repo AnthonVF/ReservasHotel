@@ -1,0 +1,47 @@
+.container {
+    background-color: #fff; /* Background color for the container */
+    border-radius: 5px; /* Rounded corners for the container */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Box-shadow for a subtle depth effect */
+  }
+  
+  h2 {
+    color: #333; /* Color for headers */
+    margin-bottom: 15px;
+  }
+  
+  p {
+    color: #666; /* Color for paragraph text */
+    margin-bottom: 10px;
+  }
+  
+  .customer-data-block {
+  background-color: #f9f9f9; /* Un color de fondo diferente para destacar */
+  border: 1px solid #e1e1e1; /* Un borde sutil */
+  border-radius: 4px; /* Esquinas redondeadas */
+  padding: 15px; /* Espaciado interno */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave para profundidad */
+  }
+  
+  .purchase-summary-block, .payment-block {
+  background-color: #fff; /* Fondo blanco para estas secciones */
+  border: 1px solid #e1e1e1; /* Borde sutil */
+  border-radius: 4px; /* Esquinas redondeadas */
+  padding: 15px; /* Espaciado interno */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+  }
+  
+  /* Form button styles */
+  button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #0f4d5a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+  background-color: #4494b3;
+  }

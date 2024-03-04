@@ -1,0 +1,36 @@
+<header>
+    <div class="site-header">
+        <a routerLink="/inicio">
+            <img src="assets/nombreHotel.png" alt="Logo" id="logo">
+        </a>
+        
+        <div class="header-icons">
+            <a routerLink="/reserva" class="header-icon"><i class="fas fa-shopping-cart"></i></a>
+            <a routerLink="/login" class="header-icon"><i class="fas fa-user"></i></a>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" routerLink="/"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" [routerLink]="['/inicio']">INICIO</a>
+                    <a class="nav-item nav-link" [routerLink]="['/habitacion']">HABITACIONES</a>
+                    <a class="nav-item nav-link" [routerLink]="['/contacto']">CONTACTO</a>
+                    <a class="nav-item nav-link" [routerLink]="['/sobre-nosotros']">ACERCA DE NOSOTROS</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<section id="content">
+    <router-outlet></router-outlet>
+</section>

@@ -1,0 +1,22 @@
+/* Estilos para los términos y condiciones */
+.terms-section {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espacio alrededor del contenido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 40px auto; /* Centrado con un margen superior e inferior */
+    max-width: 800px; /* Ancho máximo del contenido */
+}
+
+.terms-section h1 {
+    text-align: center; /* Título centrado */
+}
+
+.terms-section h2 {
+    margin-top: 20px; /* Espacio antes de cada subtítulo */
+}
+
+.terms-section p {
+    text-align: justify; /* Texto justificado para mejor flujo */
+    line-height: 1.6; /* Espacio entre líneas para mejor lectura */
+    color: #333; /* Color del texto */
+}

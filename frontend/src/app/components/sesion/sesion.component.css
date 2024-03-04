@@ -1,0 +1,156 @@
+.container {
+  background-color: #fff; /* Background color for the container */
+  border-radius: 5px; /* Rounded corners for the container */
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Box-shadow for a subtle depth effect */
+}
+
+h2 {
+  color: #333; /* Color for headers */
+  margin-bottom: 15px;
+}
+
+p {
+  color: #666; /* Color for paragraph text */
+  margin-bottom: 10px;
+}
+
+.customer-data-block {
+background-color: #f9f9f9; /* Un color de fondo diferente para destacar */
+border: 1px solid #e1e1e1; /* Un borde sutil */
+border-radius: 4px; /* Esquinas redondeadas */
+padding: 15px; /* Espaciado interno */
+box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave para profundidad */
+}
+
+.purchase-summary-block, .payment-block {
+background-color: #fff; /* Fondo blanco para estas secciones */
+border: 1px solid #e1e1e1; /* Borde sutil */
+border-radius: 4px; /* Esquinas redondeadas */
+padding: 15px; /* Espaciado interno */
+box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Form button styles */
+button[type="submit"] {
+width: 100%;
+padding: 10px;
+background-color: #0f4d5a;
+color: white;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+background-color: #4494b3;
+}
+
+/* Estilos para el botón de cerrar sesión */
+.btn-cerrar-sesion {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #fa154b; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cerrar-sesion:hover {
+  background-color: #c82333; /* Color de fondo del botón al pasar el mouse */
+}
+
+.reservation-container {
+  margin-bottom: 20px; /* Espacio entre contenedores de reserva */
+}
+
+.reservation-details {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.reservation-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Agrega un poco de espacio entre los detalles de la reserva y los botones */
+}
+
+
+.btn-eliminar {
+  margin-top: 10px; /* Espacio entre el botón y los detalles de la reserva */
+  background-color: #fa154b; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: #c82333; /* Color de fondo del botón al pasar el mouse */
+}
+
+.btn-modificar {
+  margin-top: 10px; /* Espacio entre el botón y los detalles de la reserva */
+  background-color: #0f4d5a; /* Color de fondo verde para el botón */
+  color: #fff; /* Color del texto blanco */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-modificar:hover {
+  background-color: #4494b3; /* Color de fondo verde más oscuro al pasar el mouse */
+}
+
+.btn-volver-carrito {
+  background-color: #0f4d5a; /* Color de fondo especificado */
+  color: #fff; /* Color del texto */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver-carrito:hover {
+  background-color: #4494b3; /* Color más claro al pasar el mouse */
+}
+
+/* Asegúrate de tener este estilo para alinear a la derecha el botón eliminar dentro de su contenedor */
+.reservation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .reservation-actions {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+  }
+
+  .btn-eliminar,
+  .btn-modificar {
+    width: 100%; /* Hace que los botones ocupen el ancho completo */
+    margin-bottom: 10px; /* Agrega espacio entre los botones */
+  }
+  
+  /* Elimina el margen inferior del último botón para evitar espacio extra */
+  .btn-modificar {
+    margin-bottom: 0;
+  }
+}

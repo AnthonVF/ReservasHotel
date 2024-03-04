@@ -1,0 +1,77 @@
+/* Container for login and create account forms */
+.login-container {
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    padding-top: 40px; /* Adjust the padding to position your form appropriately */
+}
+
+.shopping-cart-container h1 {
+    text-align: center; /* Alinea el texto a la izquierda */
+    padding-left: 15px; /* Añade un poco de padding para alinear con el formulario, ajusta según sea necesario */
+}
+
+/* Styles for the tabs at the top of the forms */
+.tabs {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 20px;
+}
+
+.tab.active {
+    background: #4494b3; /* or any other color you want for the active tab */
+    color: white; /* change text color for better contrast if needed */
+    border: 1px solid #4494b3;
+}
+
+.tab {
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Styles for form elements */
+#loginForm,
+#createAccountForm {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Form input styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Form button styles */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0f4d5a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #4494b3;
+}
+
+@media (max-width: 500px) {
+    .login-container {
+        max-width: 100%;
+        padding-top: 20px; /* Adjust as needed for mobile */
+    }
+}

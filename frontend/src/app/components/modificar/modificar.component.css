@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: 20px; /* Separa el encabezado del resto del contenido */
+  text-align: center; /* Centraliza el título */
+}
+
+.original-dates-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 70%; /* Ajusta el ancho del cuadro de Fechas Originales */
+}
+
+.original-dates-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center; /* Centraliza el título */
+}
+
+.new-dates-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 70%; /* Ajusta el ancho del cuadro de Nuevas Fechas */
+}
+
+.new-dates-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center; /* Centraliza el título */
+}
+
+.centralize {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#back-button {
+  background-color: #0f4d5a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#back-button:hover {
+  background-color: #4494b3;
+}
+
+#save-button {
+  background-color: #0f4d5a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#save-button:hover {
+  background-color: #4494b3;
+}

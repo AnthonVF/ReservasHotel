@@ -1,0 +1,25 @@
+<body>
+
+    <h1 style="text-align: center;">Bienvenido!</h1>
+
+    <div class="login-container">
+        <div class="tabs">
+            <button class="btn-login" [routerLink]="['/crear-usu']">Crear Cuenta</button>            
+        </div>
+
+        <div id="loginForm">
+            <input type="email" placeholder="Correo electrónico" [(ngModel)]="correo" required>
+            <input type="password" placeholder="Contraseña" [(ngModel)]="contrasena" required>
+            <button class="btn-login" (click)="iniciarSesion()">Entrar</button>
+
+            <!-- <button class="btn-login" [routerLink]="['/sesion']" >Entrar</button> -->
+            <br> <br>
+        </div>         
+        
+    </div>
+    
+    <script src="js/loginLogic.js"></script>
+</body>
+
+
+

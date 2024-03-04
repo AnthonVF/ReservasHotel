@@ -1,0 +1,64 @@
+<div class="container container-main">
+    <!-- Carrusel de imágenes -->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Aquí se agregan los estilos en línea para el fondo de cada .carousel-item -->
+            <div class="carousel-item " style="background-image:url('https://zbr.com.mx/wp-content/uploads/2024/01/compressed_img-rV6ytGb5N31w2YoVe2XCXjpu.png');"></div>
+            <div class="carousel-item " style="background-image:url('https://media.traveler.es/photos/61aa07b0dbac39d0e2febb1b/16:9/w_2560%2Cc_limit/Gallery%2520Christmas_Suite_2021%2520(1).jpg');"></div>
+            <div class="carousel-item active" style="background-image:url('https://img.freepik.com/fotos-premium/casa-nieve-palabras-nieve-techo_82740-459.jpg?w=996');"></div>
+        </div>
+    </div>
+
+    <div class="booking-wrapper">
+        <div class="booking-section">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>¡Realiza ya tu reserva!</h1>
+                    <form id="booking-form" (submit)="buscarHabitaciones()">
+                        <!-- Selectores de fecha ... -->
+                        <div class="form-row justify-content-center">
+                            <div class="col-auto">
+                                <input type="date" name="fechaIngreso" class="form-control" id="fechaIngreso" [(ngModel)]="fechaIngreso" required>
+                            </div>
+                            <div class="col-auto">
+                                <input type="date" name="fechaSalida" class="form-control" id="fechaSalida" [(ngModel)]="fechaSalida" required>
+                            </div>
+                        </div>
+
+                        <!-- Selector de adultos -->
+                        <div class="col-auto">
+                            <label for="numAdultos" class="form-label">Adultos:</label>
+                            <div class="number-input">
+                                <button type="button" (click)="decrementAdultos()" class="minus">-</button>
+                                <input class="quantity" id="numAdultos" min="1" max="5" [(ngModel)]="adults" name="numAdultos" type="number">
+                                <button type="button" (click)="incrementAdultos()" class="plus">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Selector de niños -->
+                        <div class="col-auto">
+                            <label for="numNinos" class="form-label">Niños:</label>
+                            <div class="number-input">
+                                <button type="button" (click)="decrementNinos()" class="minus">-</button>
+                                <input class="quantity" id="numNinos" min="0" max="5" [(ngModel)]="children" name="numNinos" type="number">
+                                <button type="button" (click)="incrementNinos()" class="plus">+</button>
+                            </div>
+                        </div>
+
+                        
+                        <!-- Botón de búsqueda -->
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary" id="botonBuscar" [disabled]="!fechasValidas()">Buscar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Más elementos debajo del carrusel y formulario 
+    <div class="additional-content">
+        <p>Contenido adicional aquí.</p>
+    </div>
+    -->
+</div>

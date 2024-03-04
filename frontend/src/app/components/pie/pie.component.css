@@ -1,0 +1,69 @@
+/* INICIO DE FOOTER*/
+.site-footer {
+  background-color: #0f4d5a ;
+  color: white;
+  padding: 15px 0;
+}
+
+.footer-column h3 {
+  color: #aaa;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.footer-contact li,
+.footer-links li,
+.footer-social li {
+  list-style: none;
+  margin-bottom: 1px;
+}
+
+li a {
+  color: white; /* Puedes ajustar el color del texto según tus preferencias */
+}
+
+li a:hover {
+  text-decoration: underline;
+  color: white; /* Puedes ajustar el color del texto al pasar el mouse por encima */
+}
+
+.footer-contact li i,
+.footer-social li a {
+  margin-right: 10px; /*Sangria*/
+  color: #053543 ;
+}
+
+.footer-social li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #ebf2f4 ;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.footer-social li a:hover {
+  background-color: #053543;
+  color: #ddd;
+}
+
+.footer-bottom {
+  border-top: 2px solid black; /*linea*/
+  padding-top: 5px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-social,
+  .footer-legal {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+/* FIN DE FOOTER*/

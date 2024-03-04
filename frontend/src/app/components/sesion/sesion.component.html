@@ -1,0 +1,74 @@
+<div class="container mt-5">
+  <!-- Mensaje de advertencia para crear una cuenta o iniciar sesión -->
+  <div *ngIf="mostrarMensajeCrearCuenta" class="alert alert-warning" role="alert">
+    Debes <a href="/crear-usu">crear una cuenta</a> o <a href="/login">iniciar sesión</a> para continuar.
+  </div>
+
+  <div class="row">
+    <!-- Columna de Datos del Cliente -->
+    <div class="col-12 mb-4">
+      <div *ngIf="clienteActual" class="customer-data-block">
+        <h2>Datos del Cliente</h2>
+        <p><strong>Nombre:</strong> {{ clienteActual.nombre }} {{ clienteActual.apellido }}</p>
+        <p><strong>Correo:</strong> {{ clienteActual.correo }}</p>
+        <p><strong>Cédula:</strong> {{ clienteActual.cedula }}</p>
+        <p><strong>Teléfono:</strong> {{ clienteActual.telefono }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Columna de Resumen de Compras ahora a la izquierda -->
+    <div class="col-md-8 mb-4">
+      <div class="purchase-summary-block">
+        <h2>Resumen de Compras</h2>
+        <div *ngIf="reservasConfirmadas.length > 0; else emptySummary">
+          
+          <div *ngFor="let reserva of reservasConfirmadas" class="reservation-container">
+            <div class="reservation-details">
+              <p>Reserva realizada para las fechas: {{ reserva.fechaInput | date }} - {{ reserva.fechaOutput | date }}</p>
+              <p>Número de adultos: {{ reserva.numeroAdultos }}</p>
+              <p>Número de niños: {{ reserva.numeroNinos }}</p>
+              <p>Total: {{ reserva.total }}</p>
+              <p>Habitaciones reservadas:
+                <span *ngFor="let nombreHabitacion of reserva.habitaciones; let i = index">
+                  {{ nombreHabitacion }}<span *ngIf="i < reserva.habitaciones.length - 1">, </span>
+                </span>
+              </p>
+            </div>
+            <div class="reservation-actions">
+              <button class="btn btn-eliminar float-right" (click)="confirmarEliminacion(reserva._id ? reserva._id : '')">Eliminar</button>
+              <button class="btn btn-modificar float-left" (click)="modificarReserva(reserva._id ? reserva._id : '')">Modificar</button>
+            </div>
+          </div>
+          
+        </div>
+        <ng-template #emptySummary>
+          <p>'Historial vacío'</p>
+        </ng-template>
+      </div>
+    </div>
+
+    <!-- Columna de Pago ahora a la derecha -->
+    <div class="col-md-4">
+      <div class="payment-block">
+        <h2>Pago</h2>
+        <span id="paypal-button-container"></span> <!-- Aquí se renderizará el botón de PayPal -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones para "Volver a Reservar" y "Volver al Carrito" -->
+  <div class="container mt-3 text-right">
+    <button type="button" class="btn btn-cerrar-sesion mr-2" (click)="cerrarSesion()">Cerrar Sesión</button>
+    <button type="button" class="btn btn-volver-carrito" [routerLink]="['/reserva']">Volver al Carrito</button>
+  </div>
+</div>
+
+<!-- Modal de Confirmación -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+    <button type="button" class="btn btn-primary" (click)="confirmarReserva()">Sí</button>
+  </div>
+</div>

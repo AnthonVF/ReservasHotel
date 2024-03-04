@@ -1,0 +1,100 @@
+/*INICIO DE CONTENIDO*/
+/* Sección de Contacto */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 0;
+  background-color: #f9f9f9; /* Fondo claro para la sección */
+}
+
+/* Contact Info */
+.contact-info {
+  flex-basis: 45%; /* Aproximadamente la mitad del ancho del contenedor */
+  background: #fff; /* Fondo blanco para la tarjeta de contacto */
+  padding: 20px;
+  margin-bottom: 20px; /* Espacio debajo de la tarjeta */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+.contact-info h3 {
+  margin-bottom: 15px; /* Espacio debajo del título */
+  color: #333; /* Color del texto */
+}
+
+.contact-info p,
+.contact-info a {
+  display: flex;
+  align-items: center;
+  color: #333; /* Color del texto */
+  text-decoration: none; /* Remover subrayado de enlaces */
+  padding: 5px 0; /* Espacio arriba y abajo de cada elemento */
+  border-bottom: 1px solid #eaeaea; /* Línea separadora */
+}
+
+.contact-info p:last-child,
+.contact-info a:last-child {
+  border-bottom: none; /* Remover la línea del último elemento */
+}
+
+.contact-info i {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+.contact-info a:hover i {
+  opacity: 0.7; /* Efecto al pasar el cursor */
+  cursor: pointer; /* Cambiar el cursor a una manita */
+}
+
+/* Contact Form */
+.contact-form {
+  flex-basis: 45%; /* Aproximadamente la mitad del ancho del contenedor */
+  background: #fff; /* Fondo blanco para el formulario */
+  padding: 20px;
+  margin-bottom: 20px; /* Espacio debajo del formulario */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+.contact-form h3 {
+  margin-bottom: 15px; /* Espacio debajo del título */
+  color: #333; /* Color del texto */
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #eaeaea; /* Bordes del input */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+.contact-form form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  border: none; /* Remover bordes */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar el cursor a una manita */
+}
+
+.contact-form form button:hover {
+  background-color: #0056b3; /* Oscurecer el botón al pasar el cursor */
+}
+/* Mapa */
+.map {
+    flex-basis: 100%;
+    padding-bottom: 100%; 
+}
+
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+/*FIN DE CONTENIDO*/

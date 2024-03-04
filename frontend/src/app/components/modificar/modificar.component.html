@@ -1,0 +1,48 @@
+<br>
+<div *ngIf="reserva" class="container">
+    <div class="col-12 mb-4">
+        <div class="original-dates-box">
+            <h2>Datos de la reserva</h2>
+            <!--<p>Habitaciones: {{ reserva.habitaciones }}</p>-->
+            <p>Número de Adultos: {{ reserva.numeroAdultos }}</p>
+            <p>Número de Niños: {{ reserva.numeroNinos }}</p>
+            <p>Total: {{ reserva.total | currency }}</p>
+            <p>Fecha de Entrada: {{ reserva.fechaInput | date }}</p>
+            <p>Fecha de Salida: {{ reserva.fechaOutput | date }}</p>
+        </div>
+    </div>
+    
+    <div class="col-lg-12">
+        <div class="new-dates-box centralize">
+            <h3>Nuevo Número de Adultos</h3>
+            <input type="number" id="nuevoNumeroAdultos" [(ngModel)]="nuevoNumeroAdultos"><br>
+        </div>
+    </div>
+    
+    <div class="col-lg-12">
+        <div class="new-dates-box centralize">
+            <h3>Nuevo Número de Niños</h3>
+            <input type="number" id="nuevoNumeroNinos" [(ngModel)]="nuevoNumeroNinos"><br>
+        </div>
+    </div>
+    
+    <div class="col-lg-12">
+        <div class="new-dates-box centralize">
+            <h3>Nueva Fecha de Entrada</h3>
+            <input type="date" id="nuevaFechaInput" [(ngModel)]="nuevaFechaInput" [min]="minDate"><br>
+        </div>
+    </div>
+    
+    <div class="col-lg-12">
+        <div class="new-dates-box centralize">
+            <h3>Nueva Fecha de Salida</h3>
+            <input type="date" id="nuevaFechaOutput" [(ngModel)]="nuevaFechaOutput" [min]="minDate"><br>
+        </div>
+    </div>
+    
+    <div>
+        <button id="back-button" (click)="regresar()">Regresar</button>
+        <button id="save-button" (click)="guardarCambios()">Guardar Cambios</button>
+    </div>
+</div>
+<br>

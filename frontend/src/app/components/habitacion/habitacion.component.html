@@ -1,0 +1,35 @@
+<div class="product-page">
+  <div class="container mt-4">
+      <h2>Habitaciones, suites y cabañas disponibles</h2>
+
+      
+
+      <div *ngFor="let habitacion of habitaciones" class="card mb-3">
+          <div class="row no-gutters">
+            <div class="col-md-4 image-container">
+              <img *ngIf="habitacion.imagen" [src]="url + 'get-imagen/' + habitacion.imagen" class="card-img" [alt]="habitacion.nombre">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title">{{ habitacion.nombre }}</h3>
+                <div class="card-text">
+                  <ul>
+                    <li>{{ habitacion.descripcion }}</li>
+                    <li>Precio: {{ habitacion.precio | currency }}</li>
+                    <li>Disponibles: {{ habitacion.cantidad }}</li>
+                  </ul>
+                </div>
+                <div class="card-footer">
+                  <div class="availability-badge" [class.disponible]="habitacion.cantidad > 0">{{ habitacion.cantidad > 0 ? 'Disponible' : 'No disponible' }}</div>
+                  <button class="add-to-cart" [disabled]="habitacion.cantidad === 0" (click)="agregarAlCarrito(habitacion)">Agregar al carrito</button>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+      </div>
+        
+        
+
+
+</div>

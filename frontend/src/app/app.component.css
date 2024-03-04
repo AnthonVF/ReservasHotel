@@ -1,0 +1,63 @@
+  /*INICIO DE CONTENIDO*/
+  .container-main {
+    position: relative;
+  }
+  
+  /* Estilos para .carousel-item */
+  .carousel-item {
+    height: 70vh; /* Altura fija para el carrusel, ajustar según sea necesario */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  /* Envoltura para la sección de reserva */
+  .booking-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 50%; /* Ajuste verticalmente al centro */
+    transform: translateY(-50%);
+    z-index: 3; /* Asegúrate de que esto sea mayor que el z-index del carrusel */
+  }
+  
+  /* Estilos para la sección de reserva */
+  .booking-section {
+    position: absolute; /* Posicionamiento absoluto con respecto al carrusel */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar exactamente el formulario */
+    z-index: 20; /* Asegúrate de que el z-index sea suficientemente alto para estar encima de las imágenes del carrusel */
+    width: 100%; /* Asume el ancho completo para centrar el contenido interno */
+    max-width: 600px; /* O el ancho máximo que prefieras para el formulario */
+    /* Añade un fondo y otros estilos para que coincida con tus necesidades */
+  }
+  
+  .booking-section h1 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  /* Media queries para asegurar que el formulario responda con el carrusel */
+  @media (max-width: 768px) {
+    .booking-section {
+      /* Ajustes para dispositivos móviles */
+      top: 50%; /* Puedes ajustar esto según sea necesario */
+      max-width: 75%; /* O el ancho máximo que prefieras para el formulario en móviles */
+    }
+  }
+  
+  /* Asegúrate de que el carrusel cubra el alto del formulario cuando la pantalla sea más pequeña */
+  @media (max-height: 500px) {
+    .carousel-item {
+      min-height: 100px; /* Ajusta esto para asegurarte de que el carrusel sea lo suficientemente alto */
+    }
+  }
+  /*FIN DE CONTENIDO*/
+  
+  
+  
+  
+  

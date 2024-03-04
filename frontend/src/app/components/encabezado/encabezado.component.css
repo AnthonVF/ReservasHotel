@@ -1,0 +1,96 @@
+/*INICIO CABERA*/
+.site-header .container {
+    max-width: 100%; /* Anula cualquier max-width que Bootstrap pueda aplicar */
+    flex-grow: 1; /* Asegura que el contenedor crezca para ocupar todo el espacio disponible */
+  }
+  
+  .site-header {
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #logo {
+    max-width: 200px;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .header-icons {
+    display: flex;
+  }
+  
+  .header-icon {
+    margin-right: 20px;
+    color: #0f4d5a; /* Color de los iconos */
+    font-size: 25px; /* Tamaño de los iconos */
+    text-decoration: none;
+    transition: color 0.3s; /* Transición suave del color al pasar el cursor sobre los iconos */
+  }
+  
+  .header-icon:hover {
+    color: #4494b3 ; /* Cambio de color al pasar el cursor sobre los iconos */
+  }
+  
+  /* Espacio entre los iconos */
+  .header-icon + .header-icon {
+    margin-left: 15px; /* Ajusta según sea necesario */
+  }
+  
+  /* Barra de navegación debajo del logo */
+  .navbar {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Centra los elementos de la barra de navegación horizontalmente */
+  .navbar-nav {
+    display: flex; /* Establece los elementos de la navegación en línea */
+    justify-content: center; /* Centra los elementos de navegación */
+    flex-grow: 1; /* Asegura que la barra de navegación ocupe todo el espacio disponible */
+  }
+  
+  /* Centra el contenedor de navegación dentro de la barra de navegación */
+  .navbar-collapse {
+    justify-content: center; /* Centra los elementos de navegación */
+    flex-grow: 1; /* Asegura que el contenedor de navegación ocupe todo el espacio disponible */
+  }
+  
+  /* Contenedor de navegación */
+  .navbar-collapse {
+    justify-content: center; /* Centrar los enlaces de navegación */
+  }
+  
+  /* Estilos para los elementos de la barra de navegación */
+  .navbar-nav .nav-link {
+    color: #000; /* Color inicial de los enlaces */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+  }
+  
+  /* Estilos para el enlace de la página actual */
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-item:hover .nav-link {
+    color: rgb(211, 104, 104); /* Cambio de color a azul oscuro tipo marino al pasar el cursor */
+    border-bottom: 3px solid black; /* Barra indicadora para la página actual */
+  }
+  
+  /* Elimina la barra inferior en hover, solo la queremos en el enlace activo */
+  .navbar-nav .nav-item:hover .nav-link {
+    border-bottom: none;
+  }
+  
+  /* Añade una transición suave para el indicador de la página actual */
+  .nav-link.active {
+    transition: border-bottom 0.3s;
+  }
+  
+  /* Estilos adicionales para mejorar el hover de los enlaces */
+  .navbar-nav .nav-link:not(.active):hover {
+    color: black; /* Cambia a azul oscuro cuando se pasa el cursor por encima */
+  }
+  /*FIN CABERA*/
+  
+ 
